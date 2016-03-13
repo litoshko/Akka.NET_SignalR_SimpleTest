@@ -59,7 +59,7 @@
             } else {
 
                 var playerExistsInList = ko.utils.arrayFirst(vm.otherPlayers(), function (player) {
-                    return playerName === player.playerName;
+                    return playerName === player.playerName();
                 });
 
                 if (!playerExistsInList) {
