@@ -17,7 +17,7 @@
     <h3>Health</h3>
     <p><span data-bind="text: thisPlayer().health"></span></p>
 
-    <h3 data-bind="visible: !this.Player().isAlive()" style="color: red;">Dead</h3>
+    <h3 data-bind="visible: !thisPlayer().isAlive()" style="color: red;">Dead</h3>
 </div>
 
 <div>
@@ -71,14 +71,12 @@
 
         gameHub.client.updatePlayerHealth = function (playerName, health) {
 
-            var isMe = playerName === vm.thisPlayer().playerName();
-
-            if (isMe) {
-
+            if (vm.thisPlayer().playerName() === playerName) {
+                // Update own health
                 vm.thisPlayer().changeHealth(health);
 
             } else {
-
+                // update other player health
                 vm.otherPlayers().forEach(function (otherPlayer) {
                     if (otherPlayer.playerName() === playerName) {
                         otherPlayer.changeHealth(health);
@@ -98,7 +96,7 @@
             }
 
             self.changeHealth = function (newHealth) {
-                self.changeHealth(newHealth);
+                self.health(newHealth);
 
                 if (newHealth <= 0) {
                     self.isAlive(false);
@@ -113,6 +111,7 @@
         }
 
         var GameViewModel = function () {
+
             var self = this;
 
             // joining game state
