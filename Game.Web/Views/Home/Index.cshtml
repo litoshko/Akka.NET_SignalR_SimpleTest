@@ -25,3 +25,22 @@
 
     @* TODO list all other players *@
 </div>
+
+@section scripts
+{
+    <script>
+        var gameHub = $.connection.gameHub;
+
+        gameHub.client.playerJoined = function (playerName, health) {
+            // todo
+            console.log("PlayerJoined");
+        }
+
+        gameHub.client.updatePlayerHealth = function (playerName, health) {
+            // todo
+            console.log("updatePlayerHealth");
+        }
+
+        $.connection.hub.start();
+    </script>
+}
