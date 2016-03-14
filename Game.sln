@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Readme.txt = Readme.txt
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.State", "Game.State\Game.State.csproj", "{A30C8203-1E5F-40E9-97E6-56A3D161F327}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.WindowsService", "Game.WindowsService\Game.WindowsService.csproj", "{2AD82A1C-735F-42B4-BECE-A19CE8DA9976}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +30,14 @@ Global
 		{E07EBCE0-B145-4546-B63A-E96329BC7545}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E07EBCE0-B145-4546-B63A-E96329BC7545}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E07EBCE0-B145-4546-B63A-E96329BC7545}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A30C8203-1E5F-40E9-97E6-56A3D161F327}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A30C8203-1E5F-40E9-97E6-56A3D161F327}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A30C8203-1E5F-40E9-97E6-56A3D161F327}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A30C8203-1E5F-40E9-97E6-56A3D161F327}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AD82A1C-735F-42B4-BECE-A19CE8DA9976}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AD82A1C-735F-42B4-BECE-A19CE8DA9976}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AD82A1C-735F-42B4-BECE-A19CE8DA9976}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AD82A1C-735F-42B4-BECE-A19CE8DA9976}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -16,8 +16,11 @@ namespace Game.Web.Models
 
             ActorSystem = Akka.Actor.ActorSystem.Create("GameSystem");
 
+            //ActorReferences.GameController = ActorSystem.ActorOf<GameControllerActor>();
             ActorReferences.GameController =
-                ActorSystem.ActorOf<GameControllerActor>();
+                ActorSystem.ActorSelection("akka.tcp://GameSystem@127.0.0.1:8091/user/GameController")
+                    .ResolveOne(TimeSpan.FromSeconds(3))
+                    .Result;
 
             ActorReferences.SignalRBridge =
                 ActorSystem.ActorOf(
